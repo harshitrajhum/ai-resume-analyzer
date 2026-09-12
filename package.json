@@ -3,5 +3,9 @@
     "axios": "^1.15.2",
     "express": "^4.21.2",
     "react-ga4": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/morgan": "^1.9.10"
   }
 }
