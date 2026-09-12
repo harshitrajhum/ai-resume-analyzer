@@ -500,7 +500,7 @@ export async function llmInterviewQuestions(
 ): Promise<{ questions: LlmInterviewQuestion[] } | null> {
   const nameBlock =
     accountDisplayName?.trim()
-      ? `REGISTERED CANDIDATE NAME (use ONLY this name when addressing or referring to the person — NEVER the resume filename, PDF title, or header text like "Aliza CV"):
+      ? `REGISTERED CANDIDATE NAME (use ONLY this name when addressing or referring to the person — NEVER the resume filename, PDF title, or header text like "Harshit CV"):
 "${accountDisplayName.trim()}"
 `
       : "";
@@ -543,7 +543,7 @@ CONCISENESS RULES (CRITICAL):
 - Put any extra scenario details, hints, or answer structure guidance into the "tip" field ONLY.
 - The "tip" field should be 2-3 sentences max — suggest WHAT to cover and HOW to structure the answer (e.g., STAR method, specific metrics to mention).
 - All questions must reference SPECIFIC details from THIS resume (project names, company names, tech stack).
-- Never address the candidate using the resume file name or a line that looks like a document title (e.g. "Aliza CV.pdf").`;
+- Never address the candidate using the resume file name or a line that looks like a document title (e.g. "Harshit CV.pdf").`;
 
   const result = await callGemini<{ questions: unknown[] }>(prompt);
   if (!result?.questions) return null;
@@ -701,7 +701,7 @@ LINKEDIN SUMMARY LAYOUT (MANDATORY):
       ? `
 PROFESSIONAL BIO — NAME (MANDATORY):
 - The subject of the bio MUST be "${accountDisplayName.trim()}" (third person: "${accountDisplayName.trim()} is…").
-- Do NOT use the resume filename, PDF name, or header text (e.g. "Aliza CV") as the person's name under any circumstance.
+- Do NOT use the resume filename, PDF name, or header text (e.g. "Harshit CV") as the person's name under any circumstance.
 `
       : "";
 
@@ -714,7 +714,7 @@ COVER LETTER SIGN-OFF (MANDATORY):
 
   John Smith
 - Do NOT end abruptly after the last paragraph. The sign-off is required.
-- NEVER use a resume filename, PDF title, or phrases like "Aliza CV", "John Resume", or "Curriculum Vitae" as the sign-off name — those are NOT human names.` : "";
+- NEVER use a resume filename, PDF title, or phrases like "Harshit CV", "Karan Resume", or "Curriculum Vitae" as the sign-off name — those are NOT human names.` : "";
 
   const prompt = `CRITICAL: You are a TRUTHFUL assistant. You MUST follow the anti-hallucination rules below before writing ANYTHING.
 
@@ -752,7 +752,7 @@ Return ONLY a JSON object:
 CRITICAL NAME EXTRACTION RULES:
 - The candidate's name is the HUMAN PERSON's name, usually the FIRST line of the resume.
 - Do NOT confuse University names, Company names, or Institution names with the candidate's name.
-- Examples of WRONG names: "University of California", "Massachusetts Institute", "Google LLC", "National Institute of Technology", filenames like "Jane_Doe_Resume.pdf", or headers like "Aliza CV" / "Resume — Software Engineer".
+- Examples of WRONG names: "University of California", "Massachusetts Institute", "Google LLC", "National Institute of Technology", filenames like "Harshit_Raj_Resume.pdf", or headers like "Harshit CV" / "Resume — Software Engineer".
 - The candidate's name is typically 2-3 words like "John Smith" or "Priya Sharma" — NOT an organization.
 - If a REGISTERED USER NAME is provided above, use it for signatures, first-person identity, AND the subject of a professional bio — never substitute the resume's first line if it looks like a filename.
 - If you cannot confidently identify the candidate's real name, use "the candidate" instead.

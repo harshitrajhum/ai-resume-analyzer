@@ -19,13 +19,14 @@ const fadeUp = {
 };
 
 const freePlan = {
-  name: "Basic",
+  name: "Basic Plan",
   price: "Free",
   tagline: "Perfect for trying it out",
   features: [
-    "1 Resume Upload",
+    "Resume Scans (Limited)",
+    "5 Free AI Credits",
     "Basic ATS Score",
-    "Top 3 AI Suggestions",
+    "Top AI Suggestions",
     "Resume Preview",
   ],
 };
@@ -37,9 +38,9 @@ interface StripeCheckoutResponse {
 }
 
 const proPlan = {
-  name: "Pro",
-  price: "$4.99",
-  period: "/mo",
+  name: "Pro Plan",
+  price: "$1.99",
+  period: "/month",
   tagline: "Land your dream job faster",
   features: [
     "Unlimited Resume Scans",

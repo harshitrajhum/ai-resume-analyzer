@@ -23,7 +23,7 @@ function buildAllowedCorsOrigins(): string[] {
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     // Default production app (Vercel); override/extend with CORS_ORIGIN / FRONTEND_URL
-    "https://aliza-resume-analyzer.vercel.app",
+    "https://harshit-resume-analyzer.vercel.app",
   ]) {
     set.add(o);
   }
@@ -51,7 +51,7 @@ export const env = {
   STRIPE_WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET || "",
   STRIPE_PRICE_ID: process.env.STRIPE_PRICE_ID || "",
   FRONTEND_URL: process.env.FRONTEND_URL || "http://localhost:3000",
-  ADMIN_EMAIL: process.env.ADMIN_EMAIL || "alizait1192@gmail.com",
+  ADMIN_EMAIL: process.env.ADMIN_EMAIL || "harshitrajwwe45@gmail.com",
   /** Web client ID; must match frontend Google OAuth client. GOOGLE_CLIENT_ID in .env overrides. */
   GOOGLE_CLIENT_ID:
     process.env.GOOGLE_CLIENT_ID ||

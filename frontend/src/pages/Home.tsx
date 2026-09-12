@@ -22,7 +22,7 @@ import {
   Lock,
   Github,
   Linkedin,
-  Twitter,
+  Instagram,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -499,7 +499,7 @@ export function HomePage() {
           <motion.div variants={fadeUp} initial="hidden" animate="show" custom={3} className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link to="/register">
               <Button size="lg" className="group gap-2 px-8 text-base shadow-xl shadow-indigo-500/25 transition-shadow hover:shadow-2xl hover:shadow-indigo-500/40">
-                Start Free Today — 1 AI Scan Included
+                Start Free Today — 5 Free AI Credits Included
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
@@ -651,7 +651,7 @@ export function HomePage() {
               </span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-300">
-              One free AI scan on signup. Pro unlocks unlimited analyses, mock interviews, job match, and more.
+              5 Free AICredits on signup. Pro unlocks unlimited analyses, mock interviews, job match, and more.
             </p>
           </motion.div>
 
@@ -661,12 +661,12 @@ export function HomePage() {
               custom={1}
               className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-8 text-left"
             >
-              <p className="text-sm font-semibold text-gray-400">Basic</p>
-              <p className="mt-2 text-3xl font-extrabold text-white">Free</p>
+              <p className="text-sm font-semibold text-gray-400">Basic Plan (5 Free AI Credits)</p>
+              <p className="mt-2 text-3xl font-extrabold text-white">Free </p>
               <p className="mt-1 text-sm text-gray-500">Try core ATS scoring and suggestions.</p>
               <Link to="/register" className="mt-6 block">
                 <Button variant="outline" className="w-full border-white/10 bg-white/5 text-gray-200 hover:bg-white/10">
-                  Start free
+                  Start Free Trial
                 </Button>
               </Link>
             </motion.div>
@@ -678,9 +678,9 @@ export function HomePage() {
               <span className="absolute -top-3 left-6 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 px-3 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow-md">
                 Best value
               </span>
-              <p className="mt-1 text-sm font-semibold text-indigo-300">Pro</p>
+              <p className="mt-1 text-sm font-semibold text-indigo-300">Pro Plan</p>
               <p className="mt-2 text-3xl font-extrabold text-white">
-                $4.99<span className="text-base font-normal text-gray-500">/mo</span>
+                $1.99<span className="text-base font-normal text-gray-500">/month</span>
               </p>
               <p className="mt-1 text-sm text-gray-400">Full AI suite, unlimited scans, priority support.</p>
               <Link to="/pricing" className="mt-6 block">
@@ -713,7 +713,7 @@ export function HomePage() {
             </p>
             <Link to="/register">
             <Button size="lg" className="gap-2 px-10 text-base shadow-xl shadow-indigo-500/25 transition-shadow hover:shadow-2xl hover:shadow-indigo-500/40">
-              Start Free Today — No Credit Card
+              Start Free Today
               <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
@@ -739,37 +739,41 @@ export function HomePage() {
           </div>
 
           <div className="flex items-center gap-4">
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg p-2 text-gray-500 transition-colors hover:bg-white/[0.06] hover:text-white"
-              aria-label="Twitter"
-            >
-              <Twitter className="h-5 w-5" />
-            </a>
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg p-2 text-gray-500 transition-colors hover:bg-white/[0.06] hover:text-white"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg p-2 text-gray-500 transition-colors hover:bg-white/[0.06] hover:text-white"
-              aria-label="GitHub"
-            >
-              <Github className="h-5 w-5" />
-            </a>
-          </div>
+    {/* Instagram */}
+    <a
+      href="https://www.instagram.com/harsh_siit"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rounded-lg p-2 text-gray-500 transition-colors hover:bg-white/[0.06] hover:text-white"
+      aria-label="Instagram"
+    >
+      <Instagram className="h-5 w-5" />
+    </a>
 
+    {/* LinkedIn */}
+    <a
+      href="https://www.linkedin.com/in/harshit-raj-30a25a322"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rounded-lg p-2 text-gray-500 transition-colors hover:bg-white/[0.06] hover:text-white"
+      aria-label="LinkedIn"
+    >
+      <Linkedin className="h-5 w-5" />
+    </a>
+
+    {/* GitHub */}
+    <a
+      href="https://github.com/harshitrajhum"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rounded-lg p-2 text-gray-500 transition-colors hover:bg-white/[0.06] hover:text-white"
+      aria-label="GitHub"
+    >
+      <Github className="h-5 w-5" />
+    </a>
+  </div>
           <p className="text-center text-sm text-gray-600 sm:text-right">
-            © {new Date().getFullYear()} AI Resume Analyzer. All rights reserved.
+            © {new Date().getFullYear()} AI Resume Analyzer by Harshit Raj. All rights reserved.
           </p>
         </div>
       </footer>

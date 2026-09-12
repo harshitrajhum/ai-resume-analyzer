@@ -15,14 +15,14 @@ import { ignoreAssetNoise } from "./middlewares/ignoreAssetNoise";
 const app = express();
 
 // CORS first (before helmet). Array-only `origin` in `cors` omits headers when `Origin` is missing — use a callback.
-// Production + legacy preview shape (thing-aliza-resume-analyzer.vercel.app)
-const alizaOrPreviewVercel = /^https:\/\/([a-z0-9-]+-)?aliza-resume-analyzer\.vercel\.app$/i;
-/** e.g. aliza-resume-analyzer-git-main-user.vercel.app (Vercel branch deploys) */
-function isAlizaVercelHost(url: string): boolean {
+// Production + legacy preview shape (thing-harshit-resume-analyzer.vercel.app)
+const HarshitOrPreviewVercel = /^https:\/\/([a-z0-9-]+-)?harshit-resume-analyzer\.vercel\.app$/i;
+/** e.g. harshit-resume-analyzer-git-main-user.vercel.app (Vercel branch deploys) */
+function isHarshitVercelHost(url: string): boolean {
   try {
     const { hostname, protocol } = new URL(url);
     if (protocol !== "https:") return false;
-    return hostname.endsWith(".vercel.app") && hostname.includes("aliza-resume-analyzer");
+    return hostname.endsWith(".vercel.app") && hostname.includes("harshit-resume-analyzer");
   } catch {
     return false;
   }
@@ -36,8 +36,8 @@ const corsOptions: CorsOptions = {
     }
     if (
       allowedCorsOrigins.includes(origin) ||
-      alizaOrPreviewVercel.test(origin) ||
-      isAlizaVercelHost(origin)
+      HarshitOrPreviewVercel.test(origin) ||
+      isHarshitVercelHost(origin)
     ) {
       callback(null, true);
       return;

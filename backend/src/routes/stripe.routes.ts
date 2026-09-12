@@ -9,7 +9,7 @@ const router = Router();
 
 // ── POST /api/stripe/create-checkout ────────────────────────────
 // Creates a Stripe Checkout Session and returns the hosted URL.
-// If STRIPE_PRICE_ID is not set, auto-creates a $4.99/mo recurring price.
+// If STRIPE_PRICE_ID is not set, auto-creates a $1.99/mo recurring price.
 router.post("/create-checkout", authenticate, async (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
   try {
     if (!req.user) { sendError(res, "Unauthorized", 401); return; }
@@ -35,7 +35,7 @@ router.post("/create-checkout", authenticate, async (req: AuthenticatedRequest, 
       });
       const price = await stripe.prices.create({
         product: product.id,
-        unit_amount: 499, // $4.99 in cents
+        unit_amount: 499, // $1.99 in cents
         currency: "usd",
         recurring: { interval: "month" },
       });
