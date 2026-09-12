@@ -25,9 +25,6 @@
   ],
   "author": "",
   "license": "ISC",
-  "engines": {
-    "node": "20.x"
-  },
   "overrides": {
     "afinn-165": "1.0.4",
     "uuid": "9.0.1"
