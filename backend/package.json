@@ -1,6 +1,9 @@
 {
   "name": "ai-resume-analyzer-backend",
   "version": "1.0.0",
+  "engines": {
+    "node": "24.x"
+  },
   "description": "AI Resume Analyzer & Job Matcher - Backend API",
   "main": "dist/server.js",
   "scripts": {
